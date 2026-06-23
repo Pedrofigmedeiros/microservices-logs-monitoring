@@ -85,6 +85,8 @@ volumes:
     driver: local
   esdata03:
     driver: local
+  kibanadata:
+    driver: local
 
 networks:
   elastic-net:
