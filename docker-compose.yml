@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   es-master01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     container_name: es-master01
     environment:
       - node.name=es-master01
@@ -25,7 +25,7 @@ services:
       - elastic-net
 
   es-master02:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     container_name: es-master02
     environment:
       - node.name=es-master02
@@ -46,7 +46,7 @@ services:
       - elastic-net
 
   es-master03:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     container_name: es-master03
     environment:
       - node.name=es-master03
@@ -67,7 +67,7 @@ services:
       - elastic-net
 
   es-data01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     container_name: es-data01
     environment:
       - node.name=es-data01
@@ -88,7 +88,7 @@ services:
       - elastic-net
 
   es-data02:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     container_name: es-data02
     environment:
       - node.name=es-data02
@@ -109,7 +109,7 @@ services:
       - elastic-net
 
   es-data03:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     container_name: es-data03
     environment:
       - node.name=es-data03
@@ -130,7 +130,7 @@ services:
       - elastic-net
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:8.15.0
+    image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
     container_name: kibana
     depends_on:
       - es-master01
